@@ -9,7 +9,7 @@ const Login = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const [auth, setAuth] = useAuth();
-   
+    console.log(baseurl)
 
     const onFinish = async (values) => {
         console.log(values)
@@ -22,7 +22,8 @@ const Login = () => {
            
         );
 
-           
+            console.log(response.data);
+            console.log("----token-----",response.data.token);
 
             if ( response.data) {
                 localStorage.setItem('authToken', response.data.token);
@@ -34,17 +35,15 @@ const Login = () => {
                   });
                 message.info('Login successful!');
 
-                
-                if(response.data){
+                if(response.data.user.role ==='admin' || response.data.user.role ==='superAdmin'){
                     navigate('/admin'); 
                 }
-                
+               
             } else {
                 message.error('Invalid email or password');
             }
         } catch (error) {
             message.error('Invalid email or password');
-            console.log(error)
         }
         setLoading(false);
     };

@@ -25,7 +25,11 @@ import BestOffer from "./BestOffer";
 import DealOnFire from "./DealOnFire";
 import Brand from "./Brand";
 
+import Tag from "./Tag";
+
 import Coupon from "./Coupon";
+
+import Blogs from "./Blogs";
 
 // import logo from "../../public/logo.png";
 // properties-details
@@ -41,6 +45,8 @@ const AdminPanel = () => {
   const handleMenuClick = (e) => {
     setSelectedTab(e.key);
   };
+  
+  
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
@@ -68,6 +74,13 @@ const AdminPanel = () => {
         case "deal-on-fire":
         return <DealOnFire />;
 
+
+        case "blog":
+        return <Blogs />;
+
+         case "tag":
+        return <Tag />;
+
     }
   };
 
@@ -75,6 +88,8 @@ const AdminPanel = () => {
     { key: "categories", icon: <HomeOutlined />, label: "Categories" },
     { key: "brand", icon: <TeamOutlined  />, label: "Brand" },
     { key: "coupon", icon: <TeamOutlined  />, label: "Coupon" },
+    { key: "blog", icon: <TeamOutlined  />, label: "Blogs" },
+     { key: "tag", icon: <TeamOutlined  />, label: "Tag" },
     
     // { key: "best-offer", icon: <TeamOutlined  />, label: "Best Offer" },
     // { key: "deal-on-fire", icon: <TeamOutlined  />, label: "Deal On Fire" },
@@ -89,6 +104,8 @@ const AdminPanel = () => {
      { key: "brand", icon: <TeamOutlined  />, label: "Brand" },
    
     { key: "coupon", icon: <TeamOutlined  />, label: "Coupon" },
+     { key: "blog", icon: <TeamOutlined  />, label: "Blogs" },
+      { key: "tag", icon: <TeamOutlined  />, label: "Tag" },
     //  { key: "best-offer", icon: <TeamOutlined  />, label: "Best Offer" },
     //   { key: "deal-on-fire", icon: <TeamOutlined  />, label: "Deal On Fire" },
   
