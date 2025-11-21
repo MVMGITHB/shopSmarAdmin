@@ -30,12 +30,13 @@ import Tag from "./Tag";
 import Coupon from "./Coupon";
 
 import Blogs from "./Blogs";
+import { Profile } from "./Profile";
 
 // import logo from "../../public/logo.png";
 // properties-details
 
 const AdminPanel = () => {
-  const [selectedTab, setSelectedTab] = useState("categories");
+  const [selectedTab, setSelectedTab] = useState("profile");
   const [id, setId] = useState();
   const navigate = useNavigate();
   const [auth, setAuth] = useAuth();
@@ -58,6 +59,9 @@ const AdminPanel = () => {
 
       case "users":
       return <Users />;
+
+      case "profile":
+      return <Profile />;
        
         case "categories":
         return <Category />;
@@ -85,7 +89,9 @@ const AdminPanel = () => {
   };
 
   const menuItems = [
+     { key: "profile", icon: <HomeOutlined />, label: "Profile" },
     { key: "categories", icon: <HomeOutlined />, label: "Categories" },
+   
     { key: "brand", icon: <TeamOutlined  />, label: "Brand" },
     { key: "coupon", icon: <TeamOutlined  />, label: "Coupon" },
     { key: "blog", icon: <TeamOutlined  />, label: "Blogs" },
@@ -99,7 +105,9 @@ const AdminPanel = () => {
 
 
   const menuItems1 = [
-  
+    
+     { key: "profile", icon: <HomeOutlined />, label: "Profile" },
+    { key: "users", icon: <HomeOutlined />, label: "Admin" },
     { key: "categories", icon: <HomeOutlined />, label: "Categories" },
      { key: "brand", icon: <TeamOutlined  />, label: "Brand" },
    
