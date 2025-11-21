@@ -31,6 +31,7 @@ import Coupon from "./Coupon";
 
 import Blogs from "./Blogs";
 import { Profile } from "./Profile";
+import PopupAdmin from "./PopupAdmin";
 
 // import logo from "../../public/logo.png";
 // properties-details
@@ -85,6 +86,9 @@ const AdminPanel = () => {
          case "tag":
         return <Tag />;
 
+         case "popup":
+        return <PopupAdmin />;
+
     }
   };
 
@@ -96,6 +100,7 @@ const AdminPanel = () => {
     { key: "coupon", icon: <TeamOutlined  />, label: "Coupon" },
     { key: "blog", icon: <TeamOutlined  />, label: "Blogs" },
      { key: "tag", icon: <TeamOutlined  />, label: "Tag" },
+     { key: "popup", icon: <TeamOutlined  />, label: "Popup" },
     
     // { key: "best-offer", icon: <TeamOutlined  />, label: "Best Offer" },
     // { key: "deal-on-fire", icon: <TeamOutlined  />, label: "Deal On Fire" },
@@ -114,6 +119,7 @@ const AdminPanel = () => {
     { key: "coupon", icon: <TeamOutlined  />, label: "Coupon" },
      { key: "blog", icon: <TeamOutlined  />, label: "Blogs" },
       { key: "tag", icon: <TeamOutlined  />, label: "Tag" },
+       { key: "popup", icon: <TeamOutlined  />, label: "Popup" },
     //  { key: "best-offer", icon: <TeamOutlined  />, label: "Best Offer" },
     //   { key: "deal-on-fire", icon: <TeamOutlined  />, label: "Deal On Fire" },
   

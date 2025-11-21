@@ -387,7 +387,7 @@ const Blogs = () => {
     console.log("image", file.file);
     try {
       const response = await axios.post(
-`${baseurl}/api/catagory/uploadImage`,
+    `${baseurl}/api/catagory/uploadImage`,
         formData,
         {
           headers: {
