@@ -170,7 +170,7 @@ const Blogs = () => {
 
     const fetchData4 = async () => {
         try {
-            const res = await axios.get(baseurl + "/api/auth/getAllUsers");
+            const res = await axios.get(baseurl + "/api/user/getAllUsers");
             // console.log("----data user-----", res.data);
             setUser(res.data.users);
             setLoading(false);
@@ -457,7 +457,7 @@ const Blogs = () => {
                     }
 
                     const response1 = await axios.patch(
-                        `${baseurl}/api/auth/updateUser/${auth1?.user?._id}`,
+                        `${baseurl}/api/user/updateUser/${auth1?.user?._id}`,
                         postData
                     );
 
@@ -515,6 +515,9 @@ const Blogs = () => {
                 setPhoto("");
                 setEditorContent("")
                  setImages([]);
+
+
+                 
             }
         } catch (error) {
             console.log(error);
